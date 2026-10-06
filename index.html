@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveBears.com - Local Moving & Heavy Lifting Help</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            600: '#116B56',
+                            700: '#0E6251',
+                            800: '#0b493c',
+                            900: '#073229',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo with Minimalist Single Line Bear SVG -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <svg class="w-10 h-10 text-brand-700 transition-transform group-hover:scale-105" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Bear Profile / Line Art -->
+                        <path d="M 20,55 C 10,40 15,20 30,22 C 32,15 42,10 50,15 C 58,10 68,15 70,22 C 85,20 90,40 80,55 C 85,70 70,85 50,85 C 30,85 15,70 20,55 Z" />
+                        <circle cx="35" cy="35" r="3" fill="currentColor" />
+                        <path d="M 45,45 C 48,48 52,48 55,45" />
+                        <path d="M 28,26 C 24,20 34,16 36,22" />
+                        <path d="M 72,26 C 76,20 66,16 64,22" />
+                    </svg>
+                    <span class="text-2xl font-extrabold tracking-tight text-brand-700">
+                        MoveBears<span class="text-gray-400 font-medium text-lg">.com</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
+                    <a href="#services" class="hover:text-brand-700 transition-colors">Services</a>
+                    <a href="#how-it-works" class="hover:text-brand-700 transition-colors">How It Works</a>
+                    <a href="#become-a-bear" class="hover:text-brand-700 transition-colors">Become a Bear</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-brand-700 hover:bg-brand-800 shadow-md transition-all transform hover:-translate-y-0.5">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="menu-btn" class="md:hidden p-2 text-gray-600 rounded-lg hover:bg-gray-100 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-gray-200 bg-white px-4 pt-2 pb-6 space-y-3">
+            <a href="#services" class="block py-2 text-base font-medium text-gray-600 hover:text-brand-700">Services</a>
+            <a href="#how-it-works" class="block py-2 text-base font-medium text-gray-600 hover:text-brand-700">How It Works</a>
+            <a href="#become-a-bear" class="block py-2 text-base font-medium text-gray-600 hover:text-brand-700">Become a Bear</a>
+            <a href="#book" class="block w-full text-center py-3 rounded-xl text-base font-semibold text-white bg-brand-700 hover:bg-brand-800">Get Started</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="relative gradient-bg pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-bold uppercase tracking-wider">
+                            <span>✨ Friendly Local Help</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                            Moving made effortless, <span class="text-brand-700">friendly</span>, and reliable.
+                        </h1>
+                        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 font-normal">
+                            Connect with vetted local MoveBears to help with packing, heavy lifting, full house removals, and furniture assembly.
+                        </p>
+
+                        <!-- Search / Booking Box -->
+                        <div id="book" class="bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-gray-100 max-w-xl mx-auto lg:mx-0">
+                            <form class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault();">
+                                <div class="flex-grow relative">
+                                    <input type="text" placeholder="Enter your postal code or city" class="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent text-sm text-gray-800" required />
+                                </div>
+                                <button type="submit" class="px-6 py-3.5 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-semibold text-sm transition-all shadow-md flex items-center justify-center space-x-2 shrink-0">
+                                    <span>Find Help Nearby</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Trust Badges -->
+                        <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs sm:text-sm font-semibold text-gray-500">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-brand-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                <span>Instant Quotes</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-brand-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                <span>Vetted Movers</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-brand-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                <span>Fully Insured</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Visual Card -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md bg-white p-6 rounded-3xl shadow-2xl border border-gray-100">
+                            <div class="flex items-center space-x-4 mb-6 pb-6 border-b border-gray-100">
+                                <div class="w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 font-bold text-xl">
+                                    🐻
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 text-lg">Local MoveBear Ready</h3>
+                                    <p class="text-xs text-gray-500">Average response time: &lt; 5 mins</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="p-4 rounded-xl bg-gray-50 flex items-center justify-between">
+                                    <span class="text-sm font-medium text-gray-700">Studio / 1-Bed Move</span>
+                                    <span class="text-sm font-bold text-brand-700">From $45/hr</span>
+                                </div>
+                                <div class="p-4 rounded-xl bg-gray-50 flex items-center justify-between">
+                                    <span class="text-sm font-medium text-gray-700">Heavy Lifting & Loading</span>
+                                    <span class="text-sm font-bold text-brand-700">From $35/hr</span>
+                                </div>
+                                <div class="p-4 rounded-xl bg-gray-50 flex items-center justify-between">
+                                    <span class="text-sm font-medium text-gray-700">Furniture Assembly</span>
+                                    <span class="text-sm font-bold text-brand-700">From $30/hr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold text-brand-700 uppercase tracking-widest mb-2">Our Core Services</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">How our MoveBears can lend a paw</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-100 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            📦
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Full House Removal</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Complete moving services for apartments, homes, or offices. Includes packing support, loading, transport, and unloading.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-100 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            💪
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Heavy Lifting & Packing</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Need help loading a rental truck, storage container, or moving heavy boxes upstairs? Let our strong Bears handle it.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-100 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            🔧
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Furniture Assembly</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Save time and frustration with expert disassembly and reassembly of flat-pack furniture, beds, and tables.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-100 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            🚚
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Single Item Transport</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Bought a couch, washing machine, or fridge on Marketplace? Get fast single-item pickup and delivery.
+                        </p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-100 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            🏠
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">In-Home Rearranging</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Redecorating or renovating? Get help shifting heavy furniture between rooms or floors inside your home.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-100 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            ♻️
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Disposal & Clearance</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Clear out unwanted furniture, cardboard moving boxes, and junk responsibly following your move.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold text-brand-700 uppercase tracking-widest mb-2">Simple Process</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">How MoveBears works</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 rounded-2xl bg-brand-700 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
+                            1
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Describe Your Task</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Tell us what you need moved, the location, date, and any specific requirements.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 rounded-2xl bg-brand-700 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
+                            2
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Choose Your Bear</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Compare profiles, ratings, user reviews, and upfront hourly prices to pick the right helper.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 rounded-2xl bg-brand-700 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
+                            3
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sit Back & Relax</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Your MoveBear arrives on time to carry the load, while you rest easy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <p class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">Loved by happy movers</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="p-8 rounded-2xl border border-gray-100 bg-white shadow-sm">
+                        <div class="flex text-amber-400 mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-600 text-sm italic mb-6">
+                            "The helper was punctual, friendly, and moved my heavy marble table upstairs without a single scratch. Saved my back!"
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">Sarah M.</div>
+                        <div class="text-xs text-gray-400">Local Move • Sydney</div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="p-8 rounded-2xl border border-gray-100 bg-white shadow-sm">
+                        <div class="flex text-amber-400 mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-600 text-sm italic mb-6">
+                            "Super easy platform! Booked a MoveBear to help load my truck. He did in 1 hour what would have taken me all day."
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">David K.</div>
+                        <div class="text-xs text-gray-400">Truck Loading • Melbourne</div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="p-8 rounded-2xl border border-gray-100 bg-white shadow-sm">
+                        <div class="flex text-amber-400 mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-gray-600 text-sm italic mb-6">
+                            "Prompt service and clear pricing. Assembled my big IKEA wardrobe in no time. Highly recommend!"
+                        </p>
+                        <div class="font-bold text-gray-900 text-sm">Elena R.</div>
+                        <div class="text-xs text-gray-400">Furniture Assembly • Brisbane</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="become-a-bear" class="py-16 bg-brand-700 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Ready to move or earn as a MoveBear?</h2>
+                <p class="text-brand-100 max-w-2xl mx-auto text-base">
+                    Join thousands of satisfied customers or sign up as a helper to set your own schedule and earn flexible income.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+                    <a href="#book" class="px-8 py-3.5 rounded-full bg-white text-brand-800 font-bold hover:bg-brand-50 transition-colors shadow-lg">
+                        Book a MoveBear
+                    </a>
+                    <a href="#" class="px-8 py-3.5 rounded-full border-2 border-white text-white font-bold hover:bg-white/10 transition-colors">
+                        Become a Helper
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                <div class="flex items-center space-x-3">
+                    <svg class="w-8 h-8 text-brand-600" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M 20,55 C 10,40 15,20 30,22 C 32,15 42,10 50,15 C 58,10 68,15 70,22 C 85,20 90,40 80,55 C 85,70 70,85 50,85 C 30,85 15,70 20,55 Z" />
+                        <circle cx="35" cy="35" r="3" fill="currentColor" />
+                    </svg>
+                    <span class="text-xl font-bold text-white tracking-tight">MoveBears.com</span>
+                </div>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Contact Us</a>
+                </div>
+                <div class="text-xs text-gray-500">
+                    &copy; <script>document.write(new Date().getFullYear())</script> MoveBears.com. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Mobile Navigation Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
